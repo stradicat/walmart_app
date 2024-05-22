@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Diler®</string>
+    <string name="open">abrir</string>
+    <string name="close">cerrar</string>
 </resources>
