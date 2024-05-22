@@ -6,13 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-<<<<<<< HEAD
-        android:icon="@mipmap/ic_launcher"
-||||||| parent of d265af1 (UI: app launcher icon recreated)
-        android:icon="@mipmap/ic_launcher_round"
-=======
         android:icon="@mipmap/ic_launcher_diler_round"
->>>>>>> d265af1 (UI: app launcher icon recreated)
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_diler_round"
         android:supportsRtl="true"
