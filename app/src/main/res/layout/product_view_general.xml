@@ -39,9 +39,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pvgProdPrice"
         app:layout_constraintStart_toStartOf="@+id/pvgProdDestacado"
-        app:layout_constraintTop_toBottomOf="@+id/pvgProdDestacado"
-
-        />
+        app:layout_constraintTop_toBottomOf="@+id/pvgProdDestacado" />
 
     <TextView
         android:id="@+id/pvgProdPrice"
