@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
+        android:id="@+id/productosTodos"
+        android:title="Todos"
+        tools:ignore="HardcodedText" />
+
+    <item
         android:id="@+id/producto1"
         android:title="Producto 1"
         tools:ignore="HardcodedText" />

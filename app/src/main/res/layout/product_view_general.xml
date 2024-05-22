@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productViewGeneral"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/pvgImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/img_placement_nescafe" />
+
+    <TextView
+        android:id="@+id/pvgProdDestacado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Destacado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pvgImage"
+        app:layout_constraintTop_toTopOf="@+id/pvgImage" />
+
+    <TextView
+        android:id="@+id/pvgProdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Product Title"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pvgProdPrice"
+        app:layout_constraintStart_toStartOf="@+id/pvgProdDestacado"
+        app:layout_constraintTop_toBottomOf="@+id/pvgProdDestacado"
+
+        />
+
+    <TextView
+        android:id="@+id/pvgProdPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Product Price"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pvgImage"
+        app:layout_constraintStart_toStartOf="@+id/pvgProdTitle"
+        app:layout_constraintTop_toBottomOf="@+id/pvgProdTitle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_circle_24_diler_blue"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="@id/pvgImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pvgProdPrice"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
