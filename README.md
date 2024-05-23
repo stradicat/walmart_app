@@ -20,13 +20,13 @@ Todas las vistas contienen un botón para agregar el producto al carro.
     * Menú deslizante
     * Barra de título:
         - Botón de menú deslizante
-          ~~- Botón de carro de compras~~
+          * ~~Botón de carro de compras~~
     * Vista de productos:
         - Destacado
         - General
         - Detalle
-          ~~- `onClickListener` para agregado de producto al carro de compras~~
-    ~~* RecyclerView para listado general~~
-    ~~* Vista de carro (con RecyclerView de elementos agregados)~~
-    ~~* Business logic para cálculo de prioridad de exhibición~~
-    ~~* Tests unitarios~~
+        - ~~`onClickListener` para agregado de producto al carro de compras~~
+    * ~~RecyclerView para listado general~~
+    * ~~Vista de carro (con RecyclerView de elementos agregados)~~
+    * ~~Business logic para cálculo de prioridad de exhibición~~
+    * ~~Tests unitarios~~
