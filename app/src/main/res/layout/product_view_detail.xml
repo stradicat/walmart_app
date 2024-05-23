@@ -3,31 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/productViewDetail"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="16dp"
     tools:ignore="HardcodedText">
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/pvdImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:scaleType="centerCrop"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:maxHeight="120dp"
+        android:scaleType="fitCenter"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
-        tools:src="@drawable/img_placement_nescafe" />
+        app:placeholderImage="@drawable/img_placement_queso" />
 
     <TextView
         android:id="@+id/pvdProdDestacado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginStart="16dp"
         android:text="Destacado"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pvdImage"
         app:layout_constraintTop_toTopOf="@+id/pvdImage" />
 
@@ -35,10 +34,11 @@
         android:id="@+id/pvdProdTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
+        android:gravity="start"
         android:text="Product Title"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/pvdProdPrice"
         app:layout_constraintStart_toStartOf="@+id/pvdProdDestacado"
         app:layout_constraintTop_toBottomOf="@+id/pvdProdDestacado" />
 
@@ -46,23 +46,24 @@
         android:id="@+id/pvdProdPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:text="Product Price"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pvdImage"
-        app:layout_constraintStart_toStartOf="@+id/pvdProdTitle"
+        app:layout_constraintStart_toStartOf="@+id/pvdProdDestacado"
         app:layout_constraintTop_toBottomOf="@+id/pvdProdTitle" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/baseline_add_circle_24_diler_blue"
-        app:fabSize="auto"
+        android:id="@+id/pvdBtnAdd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/diler_blue"
         app:layout_constraintBottom_toBottomOf="@id/pvdImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pvdProdPrice"
+        app:layout_constraintStart_toEndOf="@id/pvdProdTitle"
+        app:layout_constraintTop_toBottomOf="@id/pvdProdPrice"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
