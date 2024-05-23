@@ -58,7 +58,6 @@ dependencies {
     implementation("com.facebook.fresco:fresco:3.1.3")
     implementation("com.facebook.fresco:animated-webp:3.1.3")
     implementation("com.facebook.fresco:webpsupport:3.1.3")
-    implementation("com.facebook.fresco:imagepipeline-okhttp3:2.6.0")
-
-
+    implementation("com.facebook.fresco:imagepipeline-okhttp3:3.1.3")
+    compileOnly("com.facebook.infer.annotation:infer-annotation:0.18.0")
 }
