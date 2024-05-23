@@ -16,11 +16,15 @@ import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 
 class MainActivity : AppCompatActivity() {
-    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val mainBinding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(
+            layoutInflater
+        )
+    }
     private val menuSwitch: ActionBarDrawerToggle by lazy {
         ActionBarDrawerToggle(
             this,
-            binding.mainActivity,
+            mainBinding.mainActivity,
             R.string.open,
             R.string.close
         )
@@ -28,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private val productViewDestacadoBinding: ProductViewDestacadoBinding by lazy {
         ProductViewDestacadoBinding.inflate(
             LayoutInflater.from(this),
-            binding.pvgViewContainer,
+            mainBinding.pvgViewContainer,
             true
         )
     }
@@ -42,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val view = binding.root
+        val view = mainBinding.root
         setContentView(view)
         Fresco.initialize(this)
 
@@ -52,23 +56,27 @@ class MainActivity : AppCompatActivity() {
             customView = customToolbar.root
         }
 
-
+        // Test de alteración de vista de producto
         val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
         val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
         val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
-
 
         productTitle.text = "Cafesoso Negruzco"
         var arbitraryPrice: Int = 3500
         productPrice.text = "\$ $arbitraryPrice"
         productImage.setImageResource(R.drawable.img_placement_nescafe)
 
+        // Implementación del RecyclerView
+        val recyclerView = mainBinding.rvProductosGenerales
+        val adapter = mainBinding.rvProductosGenerales.adapter
+
+
         // Implementación de menú
-        binding.mainActivity.addDrawerListener(menuSwitch)
+        mainBinding.mainActivity.addDrawerListener(menuSwitch)
         menuSwitch.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.navigationDrawer.setNavigationItemSelectedListener {
+        mainBinding.navigationDrawer.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.productosTodos -> Toast.makeText(
                     applicationContext,
