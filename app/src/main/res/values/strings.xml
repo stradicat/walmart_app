@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Walmart App</string>
+    <string name="app_name">Dealer\'s</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
 </resources>
