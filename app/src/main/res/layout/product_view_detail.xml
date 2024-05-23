@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:placeholderImage="@drawable/img_placement_queso" />
+        app:placeholderImage="@drawable/img_placement_nescafe" />
 
     <TextView
         android:id="@+id/pvdProdDestacado"
