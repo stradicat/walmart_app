@@ -11,53 +11,59 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.walmartapp.databinding.ActionbarLayoutBinding
 import com.example.walmartapp.databinding.ActivityMainBinding
-import com.example.walmartapp.databinding.ProductViewGeneralBinding
+import com.example.walmartapp.databinding.ProductViewDestacadoBinding
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var menuSwitch: ActionBarDrawerToggle
-    private lateinit var productViewGeneralBinding: ProductViewGeneralBinding
-    private lateinit var customToolbar: ActionbarLayoutBinding
+    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val menuSwitch: ActionBarDrawerToggle by lazy {
+        ActionBarDrawerToggle(
+            this,
+            binding.mainActivity,
+            R.string.open,
+            R.string.close
+        )
+    }
+    private val productViewDestacadoBinding: ProductViewDestacadoBinding by lazy {
+        ProductViewDestacadoBinding.inflate(
+            LayoutInflater.from(this),
+            binding.pvgViewContainer,
+            true
+        )
+    }
+    private val customToolbar: ActionbarLayoutBinding by lazy {
+        ActionbarLayoutBinding.inflate(
+            layoutInflater
+        )
+    }
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
 
         val view = binding.root
         setContentView(view)
         Fresco.initialize(this)
 
-        // Custom toolbar
         // Set up the custom ActionBar
-        customToolbar = ActionbarLayoutBinding.inflate(layoutInflater)
         supportActionBar?.apply {
             displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
             customView = customToolbar.root
         }
 
-        // Inflate product view and add it to the container
-        val inflater = LayoutInflater.from(this)
-        productViewGeneralBinding =
-            ProductViewGeneralBinding.inflate(inflater, binding.pvgViewContainer, true)
 
-        // Access views from the included layout
-        val productTitle: TextView = productViewGeneralBinding.pvgProdTitle
-        val productPrice: TextView = productViewGeneralBinding.pvgProdPrice
-        val productImage: SimpleDraweeView = productViewGeneralBinding.pvgImage
+        val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
+        val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
+        val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
 
-        // Set values or listeners
+
         productTitle.text = "Cafesoso Negruzco"
         var arbitraryPrice: Int = 3500
         productPrice.text = "\$ $arbitraryPrice"
         productImage.setImageResource(R.drawable.img_placement_nescafe)
 
         // Implementación de menú
-        menuSwitch =
-            ActionBarDrawerToggle(this, binding.mainActivity, R.string.open, R.string.close)
-
         binding.mainActivity.addDrawerListener(menuSwitch)
         menuSwitch.syncState()
 
