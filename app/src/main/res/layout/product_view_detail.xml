@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productViewDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:ignore="HardcodedText">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/pvdImage"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:maxHeight="240dp"
+        android:scaleType="fitCenter"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/img_placement_nescafe" />
+
+    <TextView
+        android:id="@+id/pvdProdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="start"
+        android:text="Product Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/pvdImage"
+        app:layout_constraintTop_toBottomOf="@+id/pvdImage" />
+
+    <TextView
+        android:id="@+id/pvdProdPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Product Price"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pvdProdTitle"
+        app:layout_constraintEnd_toEndOf="@+id/pvdImage"
+        app:layout_constraintTop_toTopOf="@id/pvdProdTitle" />
+
+    <TextView
+        android:id="@+id/pvdProdDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere."
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@id/pvdProdPrice"
+        app:layout_constraintStart_toStartOf="@id/pvdProdTitle"
+        app:layout_constraintTop_toBottomOf="@id/pvdProdTitle" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pvdBtnAdd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/diler_blue"
+        app:fabCustomSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pvdProdDescription"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

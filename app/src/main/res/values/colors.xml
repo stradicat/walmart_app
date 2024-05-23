@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="diler_blue">#0873d6</color>
+    <color name="diler_yellow">#feb94b</color>
+    <color name="diler_green">#59b455</color>
+    <color name="diler_red">#d82837</color>
 </resources>

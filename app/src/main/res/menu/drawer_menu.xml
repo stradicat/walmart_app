@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/productosTodos"
+        android:title="Todos"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/producto1"
+        android:title="Producto 1"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/producto2"
+        android:title="Producto 2"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/producto3"
+        android:title="Producto 3"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/producto4"
+        android:title="Producto 4"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/producto5"
+        android:title="Producto 5"
+        tools:ignore="HardcodedText" />
+
+</menu>

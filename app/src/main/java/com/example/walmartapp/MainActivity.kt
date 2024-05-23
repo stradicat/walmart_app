@@ -1,20 +1,128 @@
 package com.example.walmartapp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.walmartapp.databinding.ActionbarLayoutBinding
+import com.example.walmartapp.databinding.ActivityMainBinding
+import com.example.walmartapp.databinding.ProductViewDestacadoBinding
+import com.facebook.drawee.backends.pipeline.Fresco
+import com.facebook.drawee.view.SimpleDraweeView
 
 class MainActivity : AppCompatActivity() {
+    private val mainBinding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(
+            layoutInflater
+        )
+    }
+    private val menuSwitch: ActionBarDrawerToggle by lazy {
+        ActionBarDrawerToggle(
+            this,
+            mainBinding.mainActivity,
+            R.string.open,
+            R.string.close
+        )
+    }
+    private val productViewDestacadoBinding: ProductViewDestacadoBinding by lazy {
+        ProductViewDestacadoBinding.inflate(
+            LayoutInflater.from(this),
+            mainBinding.pvgViewContainer,
+            true
+        )
+    }
+    private val customToolbar: ActionbarLayoutBinding by lazy {
+        ActionbarLayoutBinding.inflate(
+            layoutInflater
+        )
+    }
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val view = mainBinding.root
+        setContentView(view)
+        Fresco.initialize(this)
+
+        // Set up the custom ActionBar
+        supportActionBar?.apply {
+            displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+            customView = customToolbar.root
         }
+
+        // Test de alteración de vista de producto
+        val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
+        val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
+        val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
+
+        productTitle.text = "Cafesoso Negruzco"
+        var arbitraryPrice: Int = 3500
+        productPrice.text = "\$ $arbitraryPrice"
+        productImage.setImageResource(R.drawable.img_placement_nescafe)
+
+        // Implementación del RecyclerView
+        val recyclerView = mainBinding.rvProductosGenerales
+        val adapter = mainBinding.rvProductosGenerales.adapter
+
+
+        // Implementación de menú
+        mainBinding.mainActivity.addDrawerListener(menuSwitch)
+        menuSwitch.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mainBinding.navigationDrawer.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.productosTodos -> Toast.makeText(
+                    applicationContext,
+                    "Todos los productos seleccionados",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                R.id.producto1 -> Toast.makeText(
+                    applicationContext,
+                    "Selección: Producto 1",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                R.id.producto2 -> Toast.makeText(
+                    applicationContext,
+                    "Selección: Producto 2",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                R.id.producto3 -> Toast.makeText(
+                    applicationContext,
+                    "Selección: Producto 3",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                R.id.producto4 -> Toast.makeText(
+                    applicationContext,
+                    "Selección: Producto 4",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                R.id.producto5 -> Toast.makeText(
+                    applicationContext,
+                    "Selección: Producto 5",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            }
+            true
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (menuSwitch.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
