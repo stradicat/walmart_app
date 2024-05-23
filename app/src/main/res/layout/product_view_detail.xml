@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/productViewDetail"
     android:layout_width="match_parent"
-    android:padding="16dp"
     android:layout_height="wrap_content"
+
     tools:ignore="HardcodedText">
 
     <com.facebook.drawee.view.SimpleDraweeView
@@ -15,9 +15,9 @@
         android:maxHeight="240dp"
         android:scaleType="fitCenter"
         app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:placeholderImage="@drawable/img_placement_nescafe" />
 
     <TextView
@@ -38,7 +38,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-
         android:text="Product Price"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/pvdProdTitle"
@@ -51,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere."
         android:textAlignment="textStart"
-        app:layout_constraintEnd_toEndOf="@id/pvdImage"
+        app:layout_constraintEnd_toEndOf="@id/pvdProdPrice"
         app:layout_constraintStart_toStartOf="@id/pvdProdTitle"
         app:layout_constraintTop_toBottomOf="@id/pvdProdTitle" />
 
