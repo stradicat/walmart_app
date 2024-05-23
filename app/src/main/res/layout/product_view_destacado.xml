@@ -8,58 +8,63 @@
     tools:ignore="HardcodedText">
 
     <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/pvgImage"
+        android:id="@+id/pvdesImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="8dp"
         android:maxHeight="120dp"
         android:scaleType="fitCenter"
         app:flow_horizontalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/pvgProdTitle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:placeholderImage="@drawable/img_placement_papelhigienico" />
-
+        app:placeholderImage="@drawable/img_placement_queso" />
 
     <TextView
-        android:id="@+id/pvgProdTitle"
+        android:id="@+id/pvdesDestacado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Destacado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pvdesImage"
+        app:layout_constraintTop_toTopOf="@+id/pvdesImage" />
+
+    <TextView
+        android:id="@+id/pvdesProdTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-
-        android:gravity="center"
+        android:layout_marginEnd="32dp"
+        android:gravity="start"
         android:text="Product Title"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/pvgImage"
-        app:layout_constraintStart_toStartOf="@+id/pvgImage"
-        app:layout_constraintTop_toBottomOf="@+id/pvgImage" />
+        app:layout_constraintStart_toStartOf="@+id/pvdesDestacado"
+        app:layout_constraintTop_toBottomOf="@+id/pvdesDestacado" />
 
     <TextView
-        android:id="@+id/pvgProdPrice"
+        android:id="@+id/pvdesProdPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:text="Product Price"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/pvgBtnAdd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pvgProdTitle" />
+        app:layout_constraintStart_toStartOf="@+id/pvdesDestacado"
+        app:layout_constraintTop_toBottomOf="@+id/pvdesProdTitle" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/pvgBtnAdd"
+        android:id="@+id/pvdesBtnAdd"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/diler_blue"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/pvdesImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/pvgProdTitle"
-        app:layout_constraintTop_toTopOf="@id/pvgProdPrice"
+        app:layout_constraintStart_toEndOf="@id/pvdesProdTitle"
+        app:layout_constraintTop_toBottomOf="@id/pvdesProdPrice"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
