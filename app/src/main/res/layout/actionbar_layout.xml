@@ -18,7 +18,7 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif"
             android:gravity="center|start"
-            android:text="d i l e r"
+            android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold|italic"
