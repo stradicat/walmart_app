@@ -5,24 +5,24 @@
     android:id="@+id/productViewGeneral"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+
     tools:ignore="HardcodedText">
 
     <ImageView
         android:id="@+id/pvgImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="ContentDescription"
-        tools:src="@drawable/img_placement_nescafe" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/pvgProdDestacado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="Destacado"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -34,10 +34,10 @@
         android:id="@+id/pvgProdTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:text="Product Title"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/pvgProdPrice"
         app:layout_constraintStart_toStartOf="@+id/pvgProdDestacado"
         app:layout_constraintTop_toBottomOf="@+id/pvgProdDestacado" />
 
@@ -45,22 +45,27 @@
         android:id="@+id/pvgProdPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:text="Product Price"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pvgImage"
         app:layout_constraintStart_toStartOf="@+id/pvgProdTitle"
         app:layout_constraintTop_toBottomOf="@+id/pvgProdTitle" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_add_circle_24_diler_blue"
-        app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="@id/pvgImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/diler_blue"
+        android:foregroundTint="@color/white"
+        android:src="@drawable/ic_add_btn_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pvgProdPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pvgProdPrice"
+        app:layout_constraintTop_toBottomOf="@id/pvgProdPrice"
+        app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
