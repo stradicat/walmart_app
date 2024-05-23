@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">dealerStore</string>
-    <string name="open">abrir</string>
-    <string name="close">cerrar</string>
+    <string name="app_name">Dealer\'s</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
 </resources>
