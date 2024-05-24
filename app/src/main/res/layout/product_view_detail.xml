@@ -48,13 +48,21 @@
         android:id="@+id/pvdProdDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere."
+        android:text="Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus."
         android:textAlignment="textStart"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/pvdProdPrice"
         app:layout_constraintStart_toStartOf="@id/pvdProdTitle"
         app:layout_constraintTop_toBottomOf="@id/pvdProdTitle" />
 
-
+    <ViewStub
+        android:id="@+id/pvdStarRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_inflater="@layout/star_rating"
+        app:layout_constraintBottom_toTopOf="@+id/pvdBtnAdd"
+        app:layout_constraintStart_toStartOf="@id/pvdProdDescription"
+        app:layout_constraintTop_toBottomOf="@+id/pvdProdDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/pvdBtnAdd"
