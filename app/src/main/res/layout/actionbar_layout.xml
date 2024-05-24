@@ -30,7 +30,7 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/diler_foreground"
+            android:src="@drawable/ic_diler_foreground"
             tools:ignore="ContentDescription" />
 
         <View
