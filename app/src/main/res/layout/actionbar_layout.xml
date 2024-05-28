@@ -38,15 +38,23 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btnCart_TB"
-            android:layout_width="72dp"
-            android:layout_height="36dp"
-            android:backgroundTint="@color/diler_green"
-            android:text="Cart"
-            android:textSize="11sp"
-            app:cornerRadius="3dp"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/cartButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCart_TB"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/diler_green"
+                android:text="Cart"
+                android:textSize="11sp"
+                app:cornerRadius="3dp"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+
+    </LinearLayout>
 </androidx.appcompat.widget.Toolbar>

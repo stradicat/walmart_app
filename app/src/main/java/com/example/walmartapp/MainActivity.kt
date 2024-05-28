@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
+import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
@@ -14,6 +15,10 @@ import com.example.walmartapp.databinding.ActivityMainBinding
 import com.example.walmartapp.databinding.ProductViewDestacadoBinding
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
+import com.google.android.material.badge.BadgeDrawable
+import com.google.android.material.badge.BadgeUtils
+import com.google.android.material.badge.ExperimentalBadgeUtils
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
     private val mainBinding: ActivityMainBinding by lazy {
@@ -21,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             layoutInflater
         )
     }
-    private val menuSwitch: ActionBarDrawerToggle by lazy {
+    private val menuSwitchBinding: ActionBarDrawerToggle by lazy {
         ActionBarDrawerToggle(
             this,
             mainBinding.mainActivity,
@@ -36,12 +41,18 @@ class MainActivity : AppCompatActivity() {
             true
         )
     }
-    private val customToolbar: ActionbarLayoutBinding by lazy {
+    private val customToolbarBinding: ActionbarLayoutBinding by lazy {
         ActionbarLayoutBinding.inflate(
             layoutInflater
         )
     }
 
+
+    private lateinit var buttonWithBadge: MaterialButton
+    private lateinit var buttonBadgeText: TextView
+    private lateinit var buttonLayout: FrameLayout
+
+    @ExperimentalBadgeUtils
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +64,16 @@ class MainActivity : AppCompatActivity() {
         // Set up the custom ActionBar
         supportActionBar?.apply {
             displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-            customView = customToolbar.root
+            customView = customToolbarBinding.root
+        }
+
+        //
+        buttonWithBadge = customToolbarBinding.btnCartTB
+        buttonLayout = customToolbarBinding.cartButtonLayout
+
+        // Test: Badge -> buttonWithBadge
+        buttonWithBadge.setOnClickListener {
+            setBadgeCount(1)
         }
 
         // Test de alteración de vista de producto
@@ -72,8 +92,8 @@ class MainActivity : AppCompatActivity() {
 
 
         // Implementación de menú
-        mainBinding.mainActivity.addDrawerListener(menuSwitch)
-        menuSwitch.syncState()
+        mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
+        menuSwitchBinding.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         mainBinding.navigationDrawer.setNavigationItemSelectedListener {
@@ -119,8 +139,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @ExperimentalBadgeUtils
+    private fun setBadgeCount(count: Int): Int {
+        BadgeDrawable.createFromResource(this, R.xml.badge_style).apply {
+            number = count
+            BadgeUtils.attachBadgeDrawable(this, buttonWithBadge)
+        }
+        return count
+    }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (menuSwitch.onOptionsItemSelected(item)) {
+        if (menuSwitchBinding.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
