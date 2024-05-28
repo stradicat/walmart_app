@@ -55,23 +55,60 @@
         app:layout_constraintStart_toStartOf="@id/pvdProdTitle"
         app:layout_constraintTop_toBottomOf="@id/pvdProdTitle" />
 
-    <ViewStub
-        android:id="@+id/pvdStarRating"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_inflater="@layout/star_rating"
-        app:layout_constraintBottom_toTopOf="@+id/pvdBtnAdd"
-        app:layout_constraintStart_toStartOf="@id/pvdProdDescription"
-        app:layout_constraintTop_toBottomOf="@+id/pvdProdDescription" />
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/pvdBtnAdd"
+        app:layout_constraintStart_toStartOf="@+id/pvdProdDescription"
+        app:layout_constraintTop_toTopOf="@+id/pvdBtnAdd"
+        tools:ignore="ContentDescription">
+
+        <ImageView
+            android:id="@+id/star_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_empty"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/star_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_empty"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/star_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_empty"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/star_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_empty"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/star_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_empty"
+            app:tint="@color/black" />
+    </LinearLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/pvdBtnAdd"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/diler_blue"
-        app:fabCustomSize="24dp"
+        app:fabCustomSize="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pvdProdDescription"
