@@ -1,4 +1,4 @@
-package com.example.walmartapp
+package dev.dmayr.shoppingapp
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,15 +10,15 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.walmartapp.databinding.ActionbarLayoutBinding
-import com.example.walmartapp.databinding.ActivityMainBinding
-import com.example.walmartapp.databinding.ProductViewDestacadoBinding
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.badge.ExperimentalBadgeUtils
 import com.google.android.material.button.MaterialButton
+import dev.dmayr.shoppingapp.databinding.ActionbarLayoutBinding
+import dev.dmayr.shoppingapp.databinding.ActivityMainBinding
+import dev.dmayr.shoppingapp.databinding.ProductViewDestacadoBinding
 
 class MainActivity : AppCompatActivity() {
     private val mainBinding: ActivityMainBinding by lazy {
