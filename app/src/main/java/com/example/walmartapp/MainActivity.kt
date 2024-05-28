@@ -47,9 +47,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-
     private lateinit var buttonWithBadge: MaterialButton
-    private lateinit var buttonBadgeText: TextView
     private lateinit var buttonLayout: FrameLayout
 
     @ExperimentalBadgeUtils
@@ -90,12 +88,12 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = mainBinding.rvProductosGenerales
         val adapter = mainBinding.rvProductosGenerales.adapter
 
-
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
         menuSwitchBinding.syncState()
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Scaffolding del menú
         mainBinding.navigationDrawer.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.productosTodos -> Toast.makeText(
