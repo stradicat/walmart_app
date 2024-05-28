@@ -47,9 +47,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-
     private lateinit var buttonWithBadge: MaterialButton
-    private lateinit var buttonBadgeText: TextView
     private lateinit var buttonLayout: FrameLayout
 
     @ExperimentalBadgeUtils
@@ -89,7 +87,6 @@ class MainActivity : AppCompatActivity() {
         // Implementación del RecyclerView
         val recyclerView = mainBinding.rvProductosGenerales
         val adapter = mainBinding.rvProductosGenerales.adapter
-
 
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
