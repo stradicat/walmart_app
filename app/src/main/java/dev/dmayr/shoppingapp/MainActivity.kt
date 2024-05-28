@@ -1,10 +1,4 @@
-<<<<<<<< HEAD:app/src/main/java/com/example/shoppingapp/MainActivity.kt
-package com.example.shoppingapp
-|||||||| parent of b81d7fe (App: nombre de proyecto modificado a genérico):app/src/main/java/com/example/walmartapp/MainActivity.kt
-package com.example.walmartapp
-========
 package dev.dmayr.shoppingapp
->>>>>>>> b81d7fe (App: nombre de proyecto modificado a genérico):app/src/main/java/dev/dmayr/shoppingapp/MainActivity.kt
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -16,16 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<<< HEAD:app/src/main/java/com/example/shoppingapp/MainActivity.kt
-import com.example.shoppingapp.databinding.ActionbarLayoutBinding
-import com.example.shoppingapp.databinding.ActivityMainBinding
-import com.example.shoppingapp.databinding.ProductViewDestacadoBinding
-|||||||| parent of b81d7fe (App: nombre de proyecto modificado a genérico):app/src/main/java/com/example/walmartapp/MainActivity.kt
-import com.example.walmartapp.databinding.ActionbarLayoutBinding
-import com.example.walmartapp.databinding.ActivityMainBinding
-import com.example.walmartapp.databinding.ProductViewDestacadoBinding
-========
->>>>>>>> b81d7fe (App: nombre de proyecto modificado a genérico):app/src/main/java/dev/dmayr/shoppingapp/MainActivity.kt
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.badge.BadgeDrawable
