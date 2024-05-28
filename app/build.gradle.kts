@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.walmartapp"
+    namespace = "dev.dmayr.shoppingapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.walmartapp"
+        applicationId = "dev.dmayr.shoppingapp"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
