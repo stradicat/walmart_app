@@ -1,4 +1,4 @@
-package com.example.walmartapp
+package dev.dmayr.shoppingapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
