@@ -91,8 +91,9 @@ class MainActivity : AppCompatActivity() {
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
         menuSwitchBinding.syncState()
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Scaffolding del menú
         mainBinding.navigationDrawer.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.productosTodos -> Toast.makeText(
