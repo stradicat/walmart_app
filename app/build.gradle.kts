@@ -1,6 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
+    // Parcelize
+    kotlin("plugin.parcelize")
+
+    // KotlinX Serialization dependency
+    kotlin("plugin.serialization") version "1.6.0"
 }
 
 android {
@@ -60,4 +66,10 @@ dependencies {
     implementation("com.facebook.fresco:webpsupport:3.1.3")
     implementation("com.facebook.fresco:imagepipeline-okhttp3:3.1.3")
     compileOnly("com.facebook.infer.annotation:infer-annotation:0.18.0")
+
+    // Deserializers:
+    // KotlinX Serialization
+    implementation("org.jetbrains.kotlin:kotlin-serialization:1.9.0")
+    // Gson
+    implementation("com.google.code.gson:gson:2.11.0")
 }
