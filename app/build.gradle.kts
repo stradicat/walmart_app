@@ -75,14 +75,7 @@ dependencies {
     // KotlinX Serialization
     implementation(libs.kotlinx.serialization.json)
 
-    // Gson
-    implementation(libs.gson)
-    implementation(libs.converter.gson)
-
     // API calls
-    // Retrofit
-    implementation(libs.retrofit)
-
     // Ktor
     implementation(libs.ktor.client.core)
 }
