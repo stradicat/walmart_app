@@ -1,6 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
+    // Parcelize
+    kotlin("plugin.parcelize")
+
+    // KotlinX Serialization dependency
+    kotlin("plugin.serialization") version "1.6.0"
 }
 
 android {
@@ -47,7 +53,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit.junit2)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
@@ -65,4 +71,10 @@ dependencies {
     implementation(libs.webpsupport)
     implementation(libs.imagepipeline.okhttp3)
     compileOnly(libs.infer.annotation)
+
+    // Deserializers:
+    // KotlinX Serialization
+    implementation(libs.kotlin.serialization)
+    // Gson
+    implementation(libs.gson)
 }
