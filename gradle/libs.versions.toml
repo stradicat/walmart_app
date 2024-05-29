@@ -12,6 +12,8 @@ junitVersion = "1.2.1"
 #noinspection GradleDependency
 kotlinxCoroutines = "1.7.3"
 #noinspection GradleDependency
+kotlinxSerializationJson = "1.6.0"
+#noinspection GradleDependency
 lifecycleRuntimeKtx = "2.2.0"
 material = "1.12.0"
 
@@ -31,6 +33,7 @@ infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", 
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "fresco" }
 

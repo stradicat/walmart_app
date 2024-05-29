@@ -76,4 +76,8 @@ dependencies {
     implementation(libs.webpsupport)
     implementation(libs.imagepipeline.okhttp3)
     compileOnly(libs.infer.annotation)
+
+    // Deserializers:
+    // KotlinX Serialization
+    implementation(libs.kotlinx.serialization.json)
 }
