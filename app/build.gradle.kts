@@ -77,4 +77,11 @@ dependencies {
     implementation(libs.kotlin.serialization)
     // Gson
     implementation(libs.gson)
+
+    // API calls
+    // Retrofit
+    implementation(libs.retrofit)
+
+    // Ktor
+    implementation(libs.ktor.client.android)
 }
