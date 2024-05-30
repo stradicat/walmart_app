@@ -70,6 +70,8 @@ dependencies {
     // Deserializers:
     // KotlinX Serialization
     implementation("org.jetbrains.kotlin:kotlin-serialization:1.9.0")
-    // Gson
-    implementation("com.google.code.gson:gson:2.11.0")
+
+    // API calls
+    // Ktor
+    implementation("io.ktor:ktor-client-android:2.2.3")
 }
