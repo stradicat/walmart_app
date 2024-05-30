@@ -83,6 +83,4 @@ dependencies {
     // Retrofit
     implementation(libs.retrofit)
 
-    // Ktor
-    implementation(libs.ktor.client.core)
 }
