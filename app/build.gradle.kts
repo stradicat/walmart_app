@@ -4,9 +4,6 @@ plugins {
 
     // Parcelize
     kotlin("plugin.parcelize")
-
-    // KotlinX Serialization dependency
-    kotlin("plugin.serialization") version "1.6.0"
 }
 
 android {
