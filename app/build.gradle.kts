@@ -68,8 +68,6 @@ dependencies {
     compileOnly("com.facebook.infer.annotation:infer-annotation:0.18.0")
 
     // Deserializers:
-    // KotlinX Serialization
-    implementation("org.jetbrains.kotlin:kotlin-serialization:1.9.0")
     // Gson
     implementation("com.google.code.gson:gson:2.11.0")
 
@@ -77,6 +75,4 @@ dependencies {
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
-    // Ktor
-    implementation("io.ktor:ktor-client-android:2.2.3")
 }
