@@ -10,6 +10,10 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.badge.BadgeDrawable
@@ -19,6 +23,13 @@ import com.google.android.material.button.MaterialButton
 import dev.dmayr.shoppingapp.databinding.ActionbarLayoutBinding
 import dev.dmayr.shoppingapp.databinding.ActivityMainBinding
 import dev.dmayr.shoppingapp.databinding.ProductViewDestacadoBinding
+import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
+import dev.dmayr.shoppingapp.domain.usecases.ProductRepo
+import dev.dmayr.shoppingapp.presentation.adapter.ProductAdapter
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     private val mainBinding: ActivityMainBinding by lazy {
@@ -47,8 +58,10 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private val productRepo: ProductRepo by lazy { ProductRepo() }
     private lateinit var buttonWithBadge: MaterialButton
     private lateinit var buttonLayout: FrameLayout
+    private lateinit var products: List<APIResponseGson.APIResponseGsonItem>
 
     @ExperimentalBadgeUtils
     @SuppressLint("SetTextI18n")
@@ -74,7 +87,17 @@ class MainActivity : AppCompatActivity() {
             setBadgeCount(1)
         }
 
-        // Test de alteración de vista de producto
+        // Armado del RecyclerView de productos generales
+        lifecycleScope.launch(IO) {
+            repeatOnLifecycle(Lifecycle.State.CREATED) {
+                products = productRepo.fetchAllProducts()
+                withContext(Dispatchers.Main) {
+                    setupRecyclerView()
+                }
+            }
+        }
+
+        // Test de alteración de vista de producto destacado
         val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
         val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
         val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
@@ -84,9 +107,6 @@ class MainActivity : AppCompatActivity() {
         productPrice.text = "\$ $arbitraryPrice"
         productImage.setImageResource(R.drawable.img_placement_nescafe)
 
-        // Implementación del RecyclerView
-        val recyclerView = mainBinding.rvProductosGenerales
-        val adapter = mainBinding.rvProductosGenerales.adapter
 
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
@@ -135,6 +155,14 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+    }
+
+    // Implementación del RecyclerView
+    private fun setupRecyclerView() = mainBinding.rvProductosGenerales.apply {
+        val productAdapter = ProductAdapter(products)
+
+        mainBinding.rvProductosGenerales.adapter = productAdapter
+        this.layoutManager = LinearLayoutManager(this@MainActivity)
     }
 
     @ExperimentalBadgeUtils
