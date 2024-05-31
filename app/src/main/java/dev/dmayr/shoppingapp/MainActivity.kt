@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         var arbitraryPrice: Int = 3500
         productPrice.text = "\$ $arbitraryPrice"
         productImage.setImageResource(R.drawable.img_placement_nescafe)
-
+        //
 
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
