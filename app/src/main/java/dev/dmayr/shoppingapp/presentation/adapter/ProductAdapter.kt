@@ -35,5 +35,4 @@ class ProductAdapter(private val products: List<APIResponseGson.APIResponseGsonI
 
     }
 
-
 }

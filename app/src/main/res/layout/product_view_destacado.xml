@@ -20,11 +20,11 @@
         app:placeholderImage="@drawable/img_placement_queso" />
 
     <TextView
-        android:layout_marginTop="8dp"
         android:id="@+id/pvdesDestacado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="Destacado"
         android:textSize="24sp"
         android:textStyle="bold"
