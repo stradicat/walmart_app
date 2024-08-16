@@ -52,7 +52,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit.junit2)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
@@ -77,6 +77,7 @@ dependencies {
 
     // Gson
     implementation(libs.gson)
+    implementation(libs.converter.gson)
 
     // API calls
     // Retrofit
