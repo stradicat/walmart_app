@@ -1,3 +1,5 @@
+import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -48,6 +50,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
+    //noinspection GradleDependency
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
