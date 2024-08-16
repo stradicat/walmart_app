@@ -3,11 +3,9 @@ activityKtx = "1.10.1"
 #noinspection GradleDependency
 appcompat = "1.6.1" # last version compatible with API 19
 constraintlayout = "2.2.1"
-converterGson = "2.11.0"
 coreKtx = "1.16.0"
 espressoCore = "3.6.1"
 fresco = "3.6.0"
-gson = "2.13.1"
 inferAnnotation = "0.18.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
