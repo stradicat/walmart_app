@@ -52,6 +52,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // Coroutines
+    //noinspection GradleDependency
+    implementation(libs.kotlinx.coroutines.core)
+    //noinspection GradleDependency
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Lifecycle extensions
+    //noinspection GradleDependency
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    //noinspection GradleDependency
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
     // Fresco image library
     implementation(libs.fresco)
     implementation(libs.animated.webp)
