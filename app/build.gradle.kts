@@ -1,5 +1,3 @@
-import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -48,45 +46,43 @@ android {
 }
 
 dependencies {
-    //noinspection UseTomlInstead
-
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation(libs.androidx.core.ktx)
     //noinspection GradleDependency
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.activity:activity-ktx:1.9.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
     // Coroutines
     //noinspection GradleDependency
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation(libs.kotlinx.coroutines.core)
     //noinspection GradleDependency
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation(libs.kotlinx.coroutines.android)
 
     // Lifecycle extensions
     //noinspection GradleDependency
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0")
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     //noinspection GradleDependency
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // Fresco image library
-    implementation("com.facebook.fresco:fresco:3.1.3")
-    implementation("com.facebook.fresco:animated-webp:3.1.3")
-    implementation("com.facebook.fresco:webpsupport:3.1.3")
-    implementation("com.facebook.fresco:imagepipeline-okhttp3:3.1.3")
-    compileOnly("com.facebook.infer.annotation:infer-annotation:0.18.0")
+    implementation(libs.fresco)
+    implementation(libs.animated.webp)
+    implementation(libs.webpsupport)
+    implementation(libs.imagepipeline.okhttp3)
+    compileOnly(libs.infer.annotation)
 
     // Deserializers:
     // Gson
     //noinspection GradleDependency
-    implementation("com.google.code.gson:gson:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
 
     // API calls
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation(libs.retrofit)
 
 }
