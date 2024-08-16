@@ -4,6 +4,9 @@ plugins {
 
     // Parcelize
     kotlin("plugin.parcelize")
+
+    // KotlinX Serialization dependency
+    kotlin("plugin.serialization") version "1.6.0"
 }
 
 android {
@@ -47,7 +50,6 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    //noinspection GradleDependency
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
@@ -56,33 +58,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Coroutines
-    //noinspection GradleDependency
-    implementation(libs.kotlinx.coroutines.core)
-    //noinspection GradleDependency
-    implementation(libs.kotlinx.coroutines.android)
-
-    // Lifecycle extensions
-    //noinspection GradleDependency
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    //noinspection GradleDependency
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
     // Fresco image library
     implementation(libs.fresco)
     implementation(libs.animated.webp)
     implementation(libs.webpsupport)
     implementation(libs.imagepipeline.okhttp3)
     compileOnly(libs.infer.annotation)
-
-    // Deserializers:
-    // Gson
-    //noinspection GradleDependency
-    implementation(libs.gson)
-    implementation(libs.converter.gson)
-
-    // API calls
-    // Retrofit
-    implementation(libs.retrofit)
-
 }
