@@ -79,7 +79,8 @@ dependencies {
 
     // Deserializers:
     // KotlinX Serialization
-    implementation(libs.kotlin.serialization)
+    implementation(libs.kotlinx.serialization)
+    implementation(libs.kotlinx.serialization.json)
 
     // Coroutines
     //noinspection GradleDependency

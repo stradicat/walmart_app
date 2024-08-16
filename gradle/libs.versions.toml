@@ -6,18 +6,16 @@ constraintlayout = "2.1.4"
 coreKtx = "1.13.1"
 espressoCore = "3.6.1"
 fresco = "3.1.3"
-#noinspection GradleDependency
-kotlinxCoroutines = "1.7.3"
-#noinspection GradleDependency
-kotlinxSerializationJson = "1.6.0"
-#noinspection GradleDependency
-lifecycleRuntimeKtx = "2.2.0"
 inferAnnotation = "0.18.0"
-junitVersion = "1.2.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-kotlinSerialization = "1.9.0"
+#noinspection GradleDependency
+kotlinxCoroutines = "1.7.3"
+kotlinVersion = "1.9.23"
+kotlinxSerialization = "1.7.1"
 ktorClientAndroid = "2.2.3"
+#noinspection GradleDependency
+lifecycleRuntimeKtx = "2.2.0"
 material = "1.12.0"
 
 [libraries]
@@ -34,13 +32,11 @@ fresco = { module = "com.facebook.fresco:fresco", version.ref = "fresco" }
 imagepipeline-okhttp3 = { module = "com.facebook.fresco:imagepipeline-okhttp3", version.ref = "fresco" }
 infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", version.ref = "inferAnnotation" }
 junit = { module = "junit:junit", version.ref = "junit" }
-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinSerialization" }
+kotlinx-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinVersion" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "fresco" }
 
