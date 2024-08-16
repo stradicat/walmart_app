@@ -11,6 +11,7 @@ kotlinxCoroutines = "1.7.3"
 #noinspection GradleDependency
 lifecycleRuntimeKtx = "2.2.0"
 inferAnnotation = "0.18.0"
+junitVersion = "1.2.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 kotlinSerialization = "1.9.0"
@@ -35,6 +36,8 @@ kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", v
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "fresco" }
 
