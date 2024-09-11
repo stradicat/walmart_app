@@ -78,6 +78,9 @@ dependencies {
     compileOnly(libs.infer.annotation)
 
     // Deserializers:
-    // KotlinX Serialization
-    implementation(libs.kotlinx.serialization.json)
+    // Gson
+    //noinspection GradleDependency
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
+
 }
