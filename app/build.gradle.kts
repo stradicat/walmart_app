@@ -1,5 +1,3 @@
-import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -52,7 +50,6 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    //noinspection GradleDependency
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
@@ -81,6 +78,8 @@ dependencies {
     compileOnly(libs.infer.annotation)
 
     // Deserializers:
+    // KotlinX Serialization
+    implementation(libs.kotlin.serialization)
     // Gson
     //noinspection GradleDependency
     implementation(libs.gson)
