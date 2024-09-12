@@ -52,7 +52,6 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    //noinspection GradleDependency
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
@@ -81,6 +80,8 @@ dependencies {
     compileOnly(libs.infer.annotation)
 
     // Deserializers:
+    // KotlinX Serialization
+    implementation("org.jetbrains.kotlin:kotlin-serialization:1.9.0")
     // Gson
     //noinspection GradleDependency
     implementation(libs.gson)
