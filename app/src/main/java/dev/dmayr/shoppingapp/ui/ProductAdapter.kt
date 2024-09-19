@@ -1,10 +1,10 @@
-package dev.dmayr.shoppingapp.presentation.adapter
+package dev.dmayr.shoppingapp.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.dmayr.shoppingapp.databinding.ProductViewGeneralBinding
-import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
+import dev.dmayr.shoppingapp.domain.api.APIResponseGson
 
 class ProductAdapter(private val products: List<APIResponseGson.APIResponseGsonItem>) :
     RecyclerView.Adapter<ProductAdapter.ProductHolder>() {

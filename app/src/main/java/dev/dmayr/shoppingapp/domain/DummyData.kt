@@ -1,10 +1,10 @@
-package dev.dmayr.shoppingapp.domain.data
+package dev.dmayr.shoppingapp.domain
 
 import android.net.Uri
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import dev.dmayr.shoppingapp.R
-import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
+import dev.dmayr.shoppingapp.domain.api.APIResponseGson
 import kotlinx.parcelize.Parcelize
 import java.io.File
 

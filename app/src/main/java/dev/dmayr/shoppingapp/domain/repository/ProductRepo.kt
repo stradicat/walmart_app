@@ -1,7 +1,6 @@
-package dev.dmayr.shoppingapp.domain.usecases
+package dev.dmayr.shoppingapp.domain.repository
 
-import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
-import dev.dmayr.shoppingapp.domain.repository.APIRetrofitInstance
+import dev.dmayr.shoppingapp.domain.api.APIResponseGson
 
 class ProductRepo {
     suspend fun fetchAllProducts(): ArrayList<APIResponseGson.APIResponseGsonItem> {

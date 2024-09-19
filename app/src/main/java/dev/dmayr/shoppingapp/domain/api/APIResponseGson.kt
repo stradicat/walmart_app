@@ -1,4 +1,4 @@
-package dev.dmayr.shoppingapp.domain.data.model
+package dev.dmayr.shoppingapp.domain.api
 
 
 import android.os.Parcelable

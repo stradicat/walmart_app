@@ -23,9 +23,9 @@ import com.google.android.material.button.MaterialButton
 import dev.dmayr.shoppingapp.databinding.ActionbarLayoutBinding
 import dev.dmayr.shoppingapp.databinding.ActivityMainBinding
 import dev.dmayr.shoppingapp.databinding.ProductViewDestacadoBinding
-import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
-import dev.dmayr.shoppingapp.domain.usecases.ProductRepo
-import dev.dmayr.shoppingapp.presentation.adapter.ProductAdapter
+import dev.dmayr.shoppingapp.domain.api.APIResponseGson
+import dev.dmayr.shoppingapp.domain.repository.ProductRepo
+import dev.dmayr.shoppingapp.ui.ProductAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
