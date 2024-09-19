@@ -1,6 +1,6 @@
 package dev.dmayr.shoppingapp.domain.repository
 
-import dev.dmayr.shoppingapp.domain.remote.APIretrofit
+import dev.dmayr.shoppingapp.domain.api.APIretrofit
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

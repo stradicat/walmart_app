@@ -1,6 +1,5 @@
-package dev.dmayr.shoppingapp.domain.remote
+package dev.dmayr.shoppingapp.domain.api
 
-import dev.dmayr.shoppingapp.domain.data.model.APIResponseGson
 import retrofit2.Response
 import retrofit2.http.GET
 
