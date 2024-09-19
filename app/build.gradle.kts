@@ -3,10 +3,10 @@ plugins {
     id("org.jetbrains.kotlin.android")
 
     // Parcelize
-    kotlin("plugin.parcelize")
+    id("kotlin-parcelize")
 
     // KotlinX Serialization dependency
-    kotlin("plugin.serialization") version "1.6.0"
+    kotlin("plugin.serialization") version "1.9.24"
 }
 
 android {
