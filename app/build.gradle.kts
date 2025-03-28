@@ -1,5 +1,3 @@
-import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -85,5 +83,4 @@ dependencies {
     // API calls
     // Retrofit
     implementation(libs.retrofit)
-
 }

@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
 
         productTitle.text = "Café Tostado"
-        var arbitraryPrice: Int = 3500
+        val arbitraryPrice: Int = 3500
         productPrice.text = "\$ $arbitraryPrice"
         productImage.setImageResource(R.drawable.img_placement_nescafe)
         //
