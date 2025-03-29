@@ -6,7 +6,7 @@ plugins {
     id("kotlin-parcelize")
 
     // KotlinX Serialization dependency
-    kotlin("plugin.serialization") version "1.9.24"
+    kotlin("plugin.serialization") version "2.1.20"
 }
 
 android {
