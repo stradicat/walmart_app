@@ -11,7 +11,7 @@ plugins {
 
 android {
     namespace = "dev.dmayr.shoppingapp"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "dev.dmayr.shoppingapp"
