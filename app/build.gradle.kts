@@ -1,11 +1,11 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     // Parcelize
-    id("kotlin-parcelize")
+    alias(libs.plugins.kotlin.parcelize)
 
     // KotlinX Serialization dependency
-    kotlin("plugin.serialization") version "2.1.20"
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -71,11 +71,12 @@ dependencies {
     implementation(libs.imagepipeline.okhttp3)
     compileOnly(libs.infer.annotation)
 
+    // API calls
+    // Ktor
+    implementation(libs.ktor.client.core)
+
     // Deserializers:
     // KotlinX Serialization
     implementation(libs.kotlinx.serialization.json)
 
-    // API calls
-    // Ktor
-    implementation(libs.ktor.client.core)
 }
