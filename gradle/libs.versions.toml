@@ -8,6 +8,8 @@ frescoVersion = "3.6.0"
 inferAnnotationVersion = "0.18.0"
 junitJunitVersion = "4.13.2"
 junitVersion = "1.2.1"
+kotlinxCoroutinesAndroidVersion = "1.8.1"
+lifecycleVersion = "2.9.0"
 materialVersion = "1.12.0"
 
 [libraries]
@@ -17,11 +19,15 @@ androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayo
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
 animated-webp = { module = "com.facebook.fresco:animated-webp", version.ref = "frescoVersion" }
 fresco = { module = "com.facebook.fresco:fresco", version.ref = "frescoVersion" }
 imagepipeline-okhttp3 = { module = "com.facebook.fresco:imagepipeline-okhttp3", version.ref = "frescoVersion" }
 infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", version.ref = "inferAnnotationVersion" }
 junit-junit2 = { module = "junit:junit", version.ref = "junitJunitVersion" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesAndroidVersion" }
 material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "frescoVersion" }
 
