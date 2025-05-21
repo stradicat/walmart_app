@@ -1,6 +1,28 @@
 [versions]
+activityKtxVersion = "1.10.1"
+constraintlayoutVersion = "2.2.1"
+coreKtxVersion = "1.16.0"
+appcompatVersion = "1.7.0"
+espressoCoreVersion = "3.6.1"
+frescoVersion = "3.6.0"
+inferAnnotationVersion = "0.18.0"
+junitJunitVersion = "4.13.2"
+junitVersion = "1.2.1"
+materialVersion = "1.12.0"
 
 [libraries]
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtxVersion" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+animated-webp = { module = "com.facebook.fresco:animated-webp", version.ref = "frescoVersion" }
+fresco = { module = "com.facebook.fresco:fresco", version.ref = "frescoVersion" }
+imagepipeline-okhttp3 = { module = "com.facebook.fresco:imagepipeline-okhttp3", version.ref = "frescoVersion" }
+infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", version.ref = "inferAnnotationVersion" }
+junit-junit2 = { module = "junit:junit", version.ref = "junitJunitVersion" }
+material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "frescoVersion" }
 
 [plugins]
-
