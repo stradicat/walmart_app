@@ -1,19 +1,24 @@
 [versions]
+androidGradlePlugin = "8.8.2"
 activityKtx = "1.10.1"
 #noinspection GradleDependency
 appcompat = "1.6.1" # last version compatible with API 19
-constraintlayout = "2.2.1"
+#noinspection GradleDependency
+constraintlayout = "2.1.4" # last version compatible with API 19
 converterGson = "2.11.0"
-coreKtx = "1.16.0"
+#noinspection GradleDependency
+coreKtx = "1.13.1" # last version compatible with API 19
 espressoCore = "3.6.1"
 fresco = "3.6.0"
 gson = "2.13.1"
 inferAnnotation = "0.18.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
+kotlin = "2.1.20"
 kotlinxCoroutines = "1.10.2"
 kotlinxSerializationJson = "1.8.1"
-lifecycleRuntimeKtx = "2.9.0"
+#noinspection GradleDependency
+lifecycleRuntimeKtx = "2.8.7" # last version compatible with API 19
 material = "1.12.0"
 retrofit = "3.0.0"
 
@@ -35,9 +40,11 @@ infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", 
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 webpsupport = { module = "com.facebook.fresco:webpsupport", version.ref = "fresco" }
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

@@ -1,11 +1,8 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     // Parcelize
-    id("kotlin-parcelize")
-
-    // KotlinX Serialization dependency
-    kotlin("plugin.serialization") version "2.1.20"
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -48,7 +45,6 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    //noinspection GradleDependency
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
@@ -72,12 +68,10 @@ dependencies {
     implementation(libs.imagepipeline.okhttp3)
     compileOnly(libs.infer.annotation)
 
-    // Deserializers:
-    // KotlinX Serialization
-    implementation(libs.kotlinx.serialization.json)
-
     // Gson
     implementation(libs.gson)
+
+    // Deserializers:
     implementation(libs.converter.gson)
 
     // API calls
