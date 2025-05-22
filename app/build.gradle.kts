@@ -71,10 +71,11 @@ dependencies {
     // Gson
     implementation(libs.gson)
 
-    // Deserializers:
-    implementation(libs.converter.gson)
-
     // API calls
     // Retrofit
     implementation(libs.retrofit)
+
+    // Deserializers:
+    implementation(libs.converter.gson)
+
 }

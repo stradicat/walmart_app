@@ -15,7 +15,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.drawee.backends.pipeline.Fresco
-import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.badge.ExperimentalBadgeUtils
@@ -100,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         // Test de alteración de vista de producto destacado
         val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
         val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
-        val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
+        val productImage = productViewDestacadoBinding.pvdesImage
 
         productTitle.text = "Café Tostado"
         val arbitraryPrice: Int = 3500
