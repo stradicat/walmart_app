@@ -11,7 +11,6 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.drawee.backends.pipeline.Fresco
-import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.badge.ExperimentalBadgeUtils
@@ -77,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         // Test de alteración de vista de producto
         val productTitle: TextView = productViewDestacadoBinding.pvdesProdTitle
         val productPrice: TextView = productViewDestacadoBinding.pvdesProdPrice
-        val productImage: SimpleDraweeView = productViewDestacadoBinding.pvdesImage
+        val productImage = productViewDestacadoBinding.pvdesImage
 
         productTitle.text = "Café Tostado"
         var arbitraryPrice: Int = 3500
@@ -85,8 +84,8 @@ class MainActivity : AppCompatActivity() {
         productImage.setImageResource(R.drawable.img_placement_nescafe)
 
         // Implementación del RecyclerView
-        val recyclerView = mainBinding.rvProductosGenerales
-        val adapter = mainBinding.rvProductosGenerales.adapter
+        mainBinding.rvProductosGenerales
+        mainBinding.rvProductosGenerales.adapter
 
         // Implementación de menú
         mainBinding.mainActivity.addDrawerListener(menuSwitchBinding)
